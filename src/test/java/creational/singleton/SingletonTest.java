@@ -1,8 +1,8 @@
 package creational.singleton;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.Test;
+import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.assertTrue;
 
 public final class SingletonTest {
 
@@ -16,7 +16,7 @@ public final class SingletonTest {
         assertTrue(firstInstance instanceof Singleton);
     }
 
-    @org.junit.Test(expected=CloneNotSupportedException.class)
+    @Test(expected=CloneNotSupportedException.class)
     public void testCloningShouldbeNotAllowed() throws CloneNotSupportedException {
         Singleton instance = Singleton.getInstance();
         instance.clone();
